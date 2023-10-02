@@ -1,0 +1,83 @@
+/* Wyśrodkowanie treści na stronie */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('/Users/alicjaziewiec/Desktop/Repos/ai_quiz/ai_quiz/public/ai_background.png');
+  background-size: cover; /* Dopasowanie obrazka do rozmiaru ekranu */
+  background-repeat: no-repeat; /* Wyłączenie powtarzania obrazka */
+  background-attachment: fixed; /* Stałe tło, które nie przewija się z treścią strony */
+}
+
+/* Nagłówek strony */
+.header {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* Napis "QUIZ" */
+.quiz-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  color: #FFFFFF;
+}
+
+/* Pytanie */
+.question {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+/* Style dla odpowiedzi */
+.answer-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.answer-list-item {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5); /* Dostosuj rozmiar checkboxów */
+  margin-right: 10px;
+}
+
+/* Kontener pytania i odpowiedzi */
+.question-container {
+  background-color: rgba(255, 255, 255, 0.6); /* Białe tło z przeźroczystością */
+  padding: 20px; /* Margines 20 pikseli */
+  border-radius: 10px; /* Zaokrąglenie rogów */
+}
+
+.answer-label {
+  display: flex;
+  align-items: center; /* Wyśrodkowanie elementów w pionie */
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.answer-rectangle {
+  flex: 1; /* Rozciągnięcie prostokąta, aby zająć dostępną przestrzeń */
+  background-color: #213743;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.answer-rectangle:hover {
+  background-color: #306E84;
+}
+
+.answer-rectangle.selected {
+  background-color: #306E84;
+}
