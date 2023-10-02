@@ -14,25 +14,28 @@ body {
 
 /* Nagłówek strony */
 .header {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
-  color: #FFFFFF;
+  color: #E8FDFF;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Napis "QUIZ" */
 .quiz-title {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
   margin-top: 20px;
-  color: #FFFFFF;
+  color: #E8FDFF;
 }
 
 /* Pytanie */
 .question {
   font-size: 24px;
   margin-top: 20px;
+  font-weight: bold;
+  color: #213743;
 }
 
 /* Style dla odpowiedzi */
@@ -44,11 +47,6 @@ body {
 .answer-list-item {
   font-size: 20px;
   margin-top: 10px;
-}
-
-input[type="checkbox"] {
-  transform: scale(1.5); /* Dostosuj rozmiar checkboxów */
-  margin-right: 10px;
 }
 
 /* Kontener pytania i odpowiedzi */
@@ -69,15 +67,42 @@ input[type="checkbox"] {
 .answer-rectangle {
   flex: 1; /* Rozciągnięcie prostokąta, aby zająć dostępną przestrzeń */
   background-color: #213743;
-  color: #fff;
+  color: #E8FDFF;
   padding: 10px;
   border-radius: 10px;
 }
 
 .answer-rectangle:hover {
-  background-color: #306E84;
+  background-color: #306E84
 }
 
 .answer-rectangle.selected {
-  background-color: #306E84;
+  background-color: #2996be;
 }
+
+.answer-rectangle.correct {
+  background-color: #4caf50; /* Zielony kolor */
+}
+
+.answer-rectangle.incorrect {
+  background-color: #f44336; /* Czerwony kolor */
+}
+
+.button-check-answer {
+  font-size: 24px;
+  margin-top: 20px;
+  background-color: #FAC164;
+  color: #213743;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  text-align: center;
+  font-weight: bold;
+}
+
+.button-check-answer:hover {
+  background-color: #f69d0f;
+}
+
