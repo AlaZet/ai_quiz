@@ -106,3 +106,11 @@ body {
   background-color: #f69d0f;
 }
 
+.score {
+  text-align: center;
+  margin-top: 90px;
+  color: #E8FDFF;
+  font-size: 24px;
+  font-weight: bold;
+}
+

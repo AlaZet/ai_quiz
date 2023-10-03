@@ -1,23 +1,107 @@
 [
-        {
-            "questionText": "What is the first question?",
-            "answerOptions": [
-                { "answerText": "Answer 1", "isCorrect": true },
-                { "answerText": "Answer 2", "isCorrect": false },
-                { "answerText": "Answer 3", "isCorrect": false },
-                { "answerText": "Answer 4", "isCorrect": false }
-            ]
-        },
-        {
-            "questionText": "What is the second question?",
-            "answerOptions": [
-                { "answerText": "Answer 1", "isCorrect": false },
-                { "answerText": "Answer 2", "isCorrect": true },
-                { "answerText": "Answer 3", "isCorrect": true },
-                { "answerText": "Answer 4", "isCorrect": false }
-
-            ]
-        }
-    ]
-
-  
+    {
+        "questionText": "Which of the following statements provides the BEST example of the ‘AI Effect’?",
+        "answerOptions": [
+            {
+                "answerText": "People lose their jobs as AI-based systems perform their roles cheaper and better",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Competitive computer games lose popularity as AI-based systems always win",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Rule-based expert systems for medical diagnosis are no longer considered to be AI",
+                "isCorrect": true
+            },
+            {
+                "answerText": "People believe AI will take over the world, as shown in films",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "questionText": "Which of the following options is NOT a technology used to implement AI?",
+        "answerOptions": [
+            {
+                "answerText": "Support vector machine",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Decision tree",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Evolutionary reasoning",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Bayesian optimization",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "questionText": "Which of the following statements about the hardware used to implement AI-based systems is MOST likely to be CORRECT?",
+        "answerOptions": [
+            {
+                "answerText": "The processors used to train a mobile recommendation system must be the same as the processors on the mobile phone",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Graphical processing units (GPUs) are a reasonable choice to implement an AI-based computer vision system",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Deep learning systems need to be trained, evaluated, and tested using AI-specific chips",
+                "isCorrect": false
+            },
+            {
+                "answerText": "It is always best to choose processors with more bits to achieve sufficient accuracy for AI-based systems",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "questionText": "There are a number of good quality pre-trained models available in the market and you want to use one of them for an image-based classifier. You have decided to ask the provider of the model about the data used for training the model and its format. Which of the following statements is the BEST example of a risk that you are trying to mitigate by asking these questions?",
+        "answerOptions": [
+            {
+                "answerText": "Bad classification accuracy of the pre-trained models",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Differences in the data used to train the model and the operational data",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Performance efficiency issues of the pre-trained model",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Lack of explainability of the pre-trained model compared to that of a model trained by you",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "questionText": "Which of the following statements is MOST likely to be specifying a requirement for autonomy in an AI-based system?",
+        "answerOptions": [
+            {
+                "answerText": "The system shall maintain a safe distance to other vehicles until the brake or accelerator is pushed by the driver",
+                "isCorrect": true
+            },
+            {
+                "answerText": "The system shall learn the preferred style of response to emails by remotely monitoring the email traffic",
+                "isCorrect": false
+            },
+            {
+                "answerText": "The system shall compare its predictions of house prices with actual selling prices to determine if it needs to be retrained",
+                "isCorrect": false
+            },
+            {
+                "answerText": "It shall be possible to modify the system’s behavior to work with different types of users in less than a day",
+                "isCorrect": false
+            }
+        ]
+    }
+]
