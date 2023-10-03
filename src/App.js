@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import questions from './questions.json';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import questions from "./questions.json";
+import Button from "./components/Button";
+import "./App.css";
 
 function App() {
   const [quizQuestions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answersChecked, setAnswersChecked] = useState(false);
-  const [correctAnswers, setCorrectAnswers] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState([]);
   const [score, setScore] = useState(0);
 
@@ -35,19 +35,17 @@ function App() {
       return;
     }
   
-    const correctAnswersIndexes = quizQuestions[currentQuestion].answerOptions
-      .filter((answerOption) => answerOption.isCorrect)
-      .map((answerOption, index) => index);
-  
-    const isCorrect = selectedAnswers.every((index) =>
-      correctAnswersIndexes.includes(index)
+    const currentQuestionData = quizQuestions[currentQuestion];
+    const correctAnswerIndex = currentQuestionData.answerOptions.findIndex(
+      (answerOption) => answerOption.isCorrect
     );
   
-    setCorrectAnswers(correctAnswersIndexes);
+    const isCorrect = selectedAnswers.length === 1 && selectedAnswers[0] === correctAnswerIndex;
+  
     setAnswersChecked(true);
   
     if (isCorrect) {
-      // Jeśli odpowiedź jest poprawna, dodaj punkt do wyniku
+      // Jeśli odpowiedź jest poprawna, dodaj punkt
       setScore(score + 1);
     }
   };
@@ -58,16 +56,22 @@ function App() {
     setAnswersChecked(false);
   };
 
+  const handleRestartQuiz = () => {
+    setCurrentQuestion(0);
+    setSelectedAnswers([]);
+    setAnswersChecked(false);
+    setScore(0);
+  };
+
   return (
     <div className="quiz-container">
       <div className="header">Certified Tester AI Testing (CT-AI)</div>
-      <div className="quiz-title" style={{ marginBottom: '60px' }}>
+      <div className="quiz-title">
         QUIZ
       </div>
       <div className="question-container">
         <div
           className="question"
-          style={{ marginTop: '20px', marginBottom: '40px' }}
         >
           {quizQuestions[currentQuestion]?.questionText}
         </div>
@@ -78,14 +82,26 @@ function App() {
               <li className="answer-list-item" key={index}>
                 <label
                   className={`answer-label ${
-                    selectedAnswers.includes(index) ? 'selected' : ''
-                  } ${answersChecked && correctAnswers.includes(index) ? 'correct' : answersChecked && !correctAnswers.includes(index) ? 'incorrect' : ''}`}
+                    selectedAnswers.includes(index) ? "selected" : ""
+                  } ${
+                    answersChecked && answerOption.isCorrect
+                      ? "correct"
+                      : answersChecked && !answerOption.isCorrect
+                      ? "incorrect"
+                      : ""
+                  }`}
                   onClick={() => handleAnswerClick(index)}
                 >
                   <div
                     className={`answer-rectangle ${
-                      selectedAnswers.includes(index) ? 'selected' : ''
-                    } ${answersChecked && correctAnswers.includes(index) ? 'correct' : answersChecked && !correctAnswers.includes(index) ? 'incorrect' : ''}`}
+                      selectedAnswers.includes(index) ? "selected" : ""
+                    } ${
+                      answersChecked && answerOption.isCorrect
+                        ? "correct"
+                        : answersChecked && !answerOption.isCorrect
+                        ? "incorrect"
+                        : ""
+                    }`}
                   >
                     {answerOption.answerText}
                   </div>
@@ -95,36 +111,30 @@ function App() {
           )}
         </ul>
         {answersChecked ? (
-          <div
-            className="button-check-answer"
-            style={{ marginTop: '40px' }}
-            onClick={
-              currentQuestion === quizQuestions.length - 1
-                ? () => setCurrentQuestion(0)
-                : handleNextQuestion
-            }
-          >
-            {currentQuestion === quizQuestions.length - 1
-              ? 'Restart Quiz'
-              : 'Next Question'}
-          </div>
-        ) : (
-          <div
-            className="button-check-answer"
-            style={{ marginTop: '40px' }}
-            onClick={handleCheckAnswer}
-          >
-            Check Answer
-          </div>
-        )}
-      </div>
-      <div
-        className="score"
-      >
-        Score: {score}/{quizQuestions.length}
-      </div>
-    </div>
-  );
-}
+            <Button
+              currentQuestion={currentQuestion}
+              totalQuestions={quizQuestions.length}
+              answersChecked={answersChecked}
+              onClick={
+                currentQuestion === quizQuestions.length - 1
+                  ? handleRestartQuiz
+                  : handleNextQuestion
+              }
+            />
+          ) : (
+            <div
+              className="button-check-answer"
+              onClick={handleCheckAnswer}
+            >
+              Check Answer
+            </div>
+          )}
+                </div>
+                <div className="score">
+                  Score: {score}/{quizQuestions.length}
+                </div>
+              </div>
+            );
+          }
 
 export default App;
