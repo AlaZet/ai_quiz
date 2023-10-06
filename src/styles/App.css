@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("/Users/alicjaziewiec/Desktop/Repos/ai_quiz/public/ai_background.png");
+  background-size: cover; /* Dopasowanie obrazka do rozmiaru ekranu */
+  background-repeat: no-repeat; /* Wyłączenie powtarzania obrazka */
+  background-attachment: fixed; /* Stałe tło, które nie przewija się z treścią strony */
+}
+
+.header {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #e8fdff;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  color: #e8fdff;
+  margin-bottom: 60px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.score {
+  text-align: center;
+  margin-top: 90px;
+  color: #e8fdff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.sum-up-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #e8fdff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.question-counter {
+  text-align: center;
+  margin-top: 90px;
+  color: #e8fdff;
+  font-size: 24px;
+  font-weight: bold;
+}

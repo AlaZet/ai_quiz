@@ -1,6 +1,6 @@
 # AI Quiz Website
 
-![AI Quiz Website]
+![AI Quiz Website] - https://alazet.github.io/ai_quiz/
 
 ## Project Description
 

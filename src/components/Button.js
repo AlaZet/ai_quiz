@@ -6,14 +6,15 @@ function Button({ currentQuestion, totalQuestions, answersChecked, onClick }) {
     
     if (answersChecked) {
       if (currentQuestion === totalQuestions - 1) {
-        buttonText = "Restart Quiz";
-        buttonClass += " button-restart-quiz";
+        buttonText = "Try Again!";
+        buttonClass += "try-again-button";
       } else {
         buttonText = "Next Question";
         buttonClass += " button-next-question";
       }
     }
-  
+    
+    
     return (
       <button
         className={buttonClass}
@@ -22,7 +23,7 @@ function Button({ currentQuestion, totalQuestions, answersChecked, onClick }) {
         {buttonText}
       </button>
     );
-  }
+}
   
 
 export default Button;

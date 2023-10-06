@@ -1,0 +1,42 @@
+.button-check-answer {
+    font-size: 24px;
+    background-color: #fac164;
+    color: #213743;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+  
+  .button-next-question {
+    margin-top: 24px;
+    width: 100%;
+  }
+  
+  .button-restart-quiz {
+    margin-top: 24px;
+    width: 100%;
+  }
+  
+  .button-check-answer:hover {
+    background-color: #f69d0f;
+  }
+
+  .try-again-button {
+    width: 100%;
+    font-size: 24px;
+    background-color: #fac164;
+    color: #213743;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+  }
