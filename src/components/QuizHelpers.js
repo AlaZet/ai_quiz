@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 export const handleAnswerClick = (
   index,
   answersChecked,
@@ -16,9 +18,9 @@ export const handleAnswerClick = (
     updatedSelectedAnswers.push(index);
   }
 
+
   setSelectedAnswers(updatedSelectedAnswers);
 };
-
 
 export const handleCheckAnswer = (
   currentQuestion,
@@ -28,7 +30,7 @@ export const handleCheckAnswer = (
   setAnswersChecked,
   score,
   setScore,
-  setQuizCompleted
+  setLastQuestion
 ) => {
   if (answersChecked) {
     return;
@@ -38,7 +40,6 @@ export const handleCheckAnswer = (
   const correctAnswerIndex = currentQuestionData.answerOptions.findIndex(
     (answerOption) => answerOption.isCorrect
   );
-
   const isCorrect =
     selectedAnswers.length === 1 && selectedAnswers[0] === correctAnswerIndex;
 
@@ -49,8 +50,24 @@ export const handleCheckAnswer = (
   }
 
   if (currentQuestion === quizQuestions.length - 1) {
-    setQuizCompleted(true);
+    setLastQuestion(true);
   }
+
+  // Nadawanie klas CSS
+  const answerContainers = document.querySelectorAll(".answer-container");
+  answerContainers.forEach((container, index) => {
+    container.classList.remove("selected", "correct", "incorrect");
+    if (selectedAnswers.includes(index)) {
+      container.classList.add("selected");
+    }
+    if (answersChecked) {
+      if (index === correctAnswerIndex) {
+        container.classList.add("correct");
+      } else if (selectedAnswers.includes(index)) {
+        container.classList.add("incorrect");
+      }
+    }
+  });
 };
 
 
@@ -71,7 +88,6 @@ export const handleNextQuestion = (
   }
 };
 
-
 export const handleSumUp = (score, quizQuestions, handleRestartQuiz) => {
   return (
     <div className="sum-up">
@@ -80,10 +96,7 @@ export const handleSumUp = (score, quizQuestions, handleRestartQuiz) => {
         <br />
         Your score is: {score}/{quizQuestions.length}
       </div>
-      <button className="try-again-button" onClick={handleRestartQuiz}>
-        Try again!
-      </button>
+      <Button buttonClass="button-try-again" onClick={handleRestartQuiz}/>
     </div>
   );
 };
-

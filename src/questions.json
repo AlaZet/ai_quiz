@@ -103,5 +103,409 @@
                 "isCorrect": false
             }
         ]
-    }
+    },
+    {
+        "questionText": "Which of the following statements about bias in AI-based systems is NOT correct?",
+        "answerOptions": [
+          {
+            "answerText": "Bias may be caused by users of a book recommendation system making choices that deliberately cause the system to make poor suggestions",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Bias may be caused in the employee age of death prediction system by collecting the training data from a dataset of patients who are all retired",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Bias may be caused in the creditworthiness system by using training data obtained from those who own and use a credit card",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Bias may be caused in the navigation system by using a route planning algorithm that is too complex to be explained to typical users",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "questionText": "Which of the following is MOST likely to be an example of reward hacking?",
+        "answerOptions": [
+          {
+            "answerText": "The programmer’s assistant tool optimizes the code to provide reduced response times, while still ensuring that functional requirements are met",
+            "isCorrect": false
+          },
+          {
+            "answerText": "An anesthetic supply device with a goal of keeping patients stable during surgery supplies too many doses and patients do not wake up as quickly as expected",
+            "isCorrect": true
+          },
+          {
+            "answerText": "The third-party development organization paid their AI programmers based on the number of lines of code they write",
+            "isCorrect": false
+          },
+          {
+            "answerText": "A type of AI used to play competitive computer games against humans that is focused on getting the highest score",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Given the following attributes for an AI-based system (I-V):\nI. Probabilistic\nII. Explicable\nIII. Unfair\nIV. Non-deterministic\nV. Deterministic\nWhich list of attributes below is likely to cause the MOST difficulties if the system is to be used as part of a safety-related system?",
+        "answerOptions": [
+          {
+            "answerText": "I, IV",
+            "isCorrect": true
+          },
+          {
+            "answerText": "II, IV",
+            "isCorrect": false
+          },
+          {
+            "answerText": "II, III, V",
+            "isCorrect": false
+          },
+          {
+            "answerText": "I, III, V",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Which of the following statements BEST describes classification and regression as part of supervised learning?",
+        "answerOptions": [
+          {
+            "answerText": "Regression is checking that the ML model test results do not change when the same test data is executed",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Classification is the grouping of unlabeled data into separate classes",
+            "isCorrect": true
+          },
+          {
+            "answerText": "Classification is the labelling of the data for training the ML model",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Regression is predicting the number of classes that are output by the ML model",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Which of the following options BEST describes an example of reinforcement learning?",
+        "answerOptions": [
+          {
+            "answerText": "The mobile game app updates its feedback, response timing and the number of user options it provides based on how much the players spend",
+            "isCorrect": true
+          },
+          {
+            "answerText": "The language translation app searches the internet to find text provided in multiple languages to improve its translation function",
+            "isCorrect": false
+          },
+          {
+            "answerText": "The factory quality control system uses video cameras and audio analysis to identify manufactured items that are faulty based on monitoring a human quality control operative",
+            "isCorrect": false
+          },
+          {
+            "answerText": "The software component test prediction system uses a range of quality measures to identify which components are likely to contain the most defects",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "You have been asked for your opinion on the ML approach to be used for a new system that is part of the traffic management for a SMART city. The idea is that the new system will control the traffic lights in the city to ensure traffic flows easily through and around the city. Which of the following approaches do you expect MOST likely to succeed?",
+        "answerOptions": [
+          {
+            "answerText": "Unsupervised learning that is based on identifying clusters around the city where the traffic density is higher than average",
+            "isCorrect": false
+          },
+          {
+            "answerText": "A supervised learning regression solution based on thousands of journeys labelled with both journey length and duration",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Reinforcement learning that is based on a reward function that penalizes solutions that result in higher levels of traffic congestion",
+            "isCorrect": true
+          },
+          {
+            "answerText": "A supervised learning classification solution that is based on drivers and passengers submitting their favorite routes for traversing the city",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "When performing testing of a trained model, an ML engineer found that the model was highly accurate when evaluated with validation data but that it performed poorly with independent test data. Which of the following options is MOST likely to cause this situation?",
+        "answerOptions": [
+          {
+            "answerText": "Underfitting",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Concept drift",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Overfitting",
+            "isCorrect": true
+          },
+          {
+            "answerText": "Poor acceptance criteria",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Which of the following is an example of a challenge that is likely to be encountered in the course of developing and testing an ML solution?",
+        "answerOptions": [
+          {
+            "answerText": "Data anonymization operations typically require knowledge of various ML algorithms",
+            "isCorrect": false
+          },
+          {
+            "answerText": "The data used might be unstructured data",
+            "isCorrect": false
+          },
+          {
+            "answerText": "A large percentage of the budget gets spent just in data preparation",
+            "isCorrect": true
+          },
+          {
+            "answerText": "The data pipeline scalability is a challenge when training the model",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "The data scientist has complained that the model cannot be trained with one particular algorithm, although other algorithms work with the same training data. Which of the following options is the MOST likely reason for this?",
+        "answerOptions": [
+          {
+            "answerText": "Wrong data",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Missing data",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Badly labelled data",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Insufficient data",
+            "isCorrect": true
+          }
+        ]
+      }, 
+      {
+        "questionText": "DataSure is a start-up with a product that promises to improve the quality of ML models. DataSure claim that this improvement comes from checking if the data has been labeled correctly. Which of the following defects is MOST likely to have been prevented by using this product?",
+        "answerOptions": [
+          {
+            "answerText": "The model will have security vulnerabilities",
+            "isCorrect": false
+          },
+          {
+            "answerText": "The model will have poor accuracy",
+            "isCorrect": true
+          },
+          {
+            "answerText": "The model will not fulfill its intended function",
+            "isCorrect": false
+          },
+          {
+            "answerText": "The model will produce biased outputs",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "An ML engineer, upon finding insufficient training data, is rotating labeled images to create additional training data. Which of the following approaches to labeling is being applied in this above example?",
+        "answerOptions": [
+          {
+            "answerText": "Crowdsourcing",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Augmentation",
+            "isCorrect": true
+          },
+          {
+            "answerText": "AI-based labeling",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Outsourcing",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "ThermalSpace is a solution provider that helps thermal power plants to optimize their power output. Their solution is based on an ML model created using past data with clearly marked output. The model helps determine the amount of electricity to be generated at a given time of the day. To determine the quality of the model using ML functional performance metrics, which of the following metrics is MOST likely to be used?",
+        "answerOptions": [
+          {
+            "answerText": "R-squared",
+            "isCorrect": true
+          },
+          {
+            "answerText": "Precision",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Recall",
+            "isCorrect": false
+          },
+          {
+            "answerText": "False Positives",
+            "isCorrect": false
+          }
+        ]
+      }, 
+      {
+        "questionText": "KnowYourPet is an app utilizing ML to determine whether a pet is hungry or not. It is understood that a dog is likely to be not hungry most of the time, as reflected in the training data. If the dog is mis-diagnosed as hungry then it may lead to overfeeding of the dog and this could lead to serious health issues. Which of the following metrics would you choose for determining the suitability of the model under test?",
+        "answerOptions": [
+          {
+            "answerText": "Accuracy",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Precision",
+            "isCorrect": true
+          },
+          {
+            "answerText": "Recall",
+            "isCorrect": false
+          },
+          {
+            "answerText": "F1-score",
+            "isCorrect": false
+          }
+        ]
+      }, 
+      {
+        "questionText": "Which of the following options BEST describes a deep neural net?",
+        "answerOptions": [
+          {
+            "answerText": "It is comprised of a hierarchical structure of neurons with the lowest (deepest) neurons making most of the decisions",
+            "isCorrect": false
+          },
+          {
+            "answerText": "It is comprised of connected neurons where each neuron has an associated bias and each connection has an associated weight",
+            "isCorrect": true
+          },
+          {
+            "answerText": "It is made up several layers with each layer (except input and output layers) connected to each other layer and errors are propagated backwards through the network",
+            "isCorrect": false
+          },
+          {
+            "answerText": "It is made up of layers of neurons, each of which generates an activation value based on the other neurons in the same layer",
+            "isCorrect": false
+          }
+        ]
+      }, 
+      {
+        "questionText": "Which of the following statements CORRECTLY describes a test coverage measure for neural networks?",
+        "answerOptions": [
+          {
+            "answerText": "Value change coverage is based on individual neurons being seen to affect the overall output of the neural network",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Threshold coverage is based on neurons outputting an activation value greater than a preset value between zero and one",
+            "isCorrect": true
+          },
+          {
+            "answerText": "Neuron coverage is a measure of the proportion of neurons that are activated at any time during the testing",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Sign change coverage measures the coverage of neurons that output both positive, negative and zero activation values",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Which of the following requirements for an AI-based system is MOST likely to cause a significant challenge in testing?",
+        "answerOptions": [
+          {
+            "answerText": "The system shall be more accurate than the system it is replacing",
+            "isCorrect": false
+          },
+          {
+            "answerText": "The AI component in the system shall have 100% accuracy",
+            "isCorrect": false
+          },
+          {
+            "answerText": "A human operator should be able to override the system in 1 second",
+            "isCorrect": false
+          },
+          {
+            "answerText": "The system shall mimic the human emotions of a typical game player",
+            "isCorrect": true
+          }
+        ]
+      }, 
+      {
+        "questionText": "Which of the following is a factor associated with the test data that can make the testing of AI-based systems difficult?",
+        "answerOptions": [
+          {
+            "answerText": "Sourcing big data with high velocity",
+            "isCorrect": true
+          },
+          {
+            "answerText": "Sourcing data from a single source",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Sourcing data separately from the data scientists",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Sourcing data from public websites",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Why would the accuracy of human decisions be considered in testing as well as the accuracy of AI-based systems?",
+        "answerOptions": [
+          {
+            "answerText": "Intuitive human decisions can be made faster than a corresponding AI-based system in some situations",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Unethical decisions can be made by humans as well as AI-based systems",
+            "isCorrect": false
+          },
+          {
+            "answerText": "The accuracy of human decisions is not relevant to testing AI-based systems",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Human decisions may be of lower quality when they have been recommended by an AI-based system",
+            "isCorrect": true
+          }
+        ]
+      }, 
+      {
+        "questionText": "An ML-based toll charging solution determines the type of incoming vehicles from the images captured by a camera. There are different types of cameras available and the solution provider claims to be able to use cameras of different resolutions. The images need to be in jpeg format with a size of 320X480 pixels for the purpose of training the model as well as for predicting the outcome. The model should be able to classify the vehicle types with certain desired high level of accuracy and should be tested against vulnerabilities. Each toll plaza will have its own complete system unconnected to any other system. Which of the following types of testing are the MOST appropriate options for the tests you would choose for system testing? SELECT 2 ANSWERS",
+        "answerOptions": [
+          {
+            "answerText": "Testing for concept drift",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Adversarial testing",
+            "isCorrect": true
+          },
+          {
+            "answerText": "Scalability testing",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Fairness testing",
+            "isCorrect": false
+          },
+          {
+            "answerText": "Data pipeline testing",
+            "isCorrect": true
+          }
+        ]
+      }              
+
 ]

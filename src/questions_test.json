@@ -1,0 +1,44 @@
+[
+    {
+        "questionText": "Which of the following statements provides the BEST example of the ‘AI Effect’?",
+        "answerOptions": [
+            {
+                "answerText": "People lose their jobs as AI-based systems perform their roles cheaper and better",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Competitive computer games lose popularity as AI-based systems always win",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Rule-based expert systems for medical diagnosis are no longer considered to be AI",
+                "isCorrect": true
+            },
+            {
+                "answerText": "People believe AI will take over the world, as shown in films",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "questionText": "Which of the following options is NOT a technology used to implement AI?",
+        "answerOptions": [
+            {
+                "answerText": "Support vector machine",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Decision tree",
+                "isCorrect": false
+            },
+            {
+                "answerText": "Evolutionary reasoning",
+                "isCorrect": true
+            },
+            {
+                "answerText": "Bayesian optimization",
+                "isCorrect": false
+            }
+        ]
+    }
+]
