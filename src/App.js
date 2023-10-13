@@ -5,9 +5,10 @@ import {
   handleNextQuestion,
   handleSumUp,
 } from "./components/QuizHelpers";
+import Button from "./components/Button.js";
 
-import questions from "./questions_test.json";
-import Button from "./components/Button";
+import questions from "./questions.json";
+import "./styles/Button.css";
 import "./styles/QuizContainer.css";
 import "./styles/App.css";
 
@@ -17,9 +18,9 @@ function App() {
   const [answersChecked, setAnswersChecked] = useState(false);
   const [selectedAnswers, setSelectedAnswers] = useState([]);
   const [score, setScore] = useState(0);
-  const [showScore, setShowScore] = useState(false);
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [lastQuestion, setLastQuestion] = useState(false);
+  const [showSummary, setShowSummary] = useState(false);
 
   useEffect(() => {
     setQuestions(questions);
@@ -31,8 +32,10 @@ function App() {
     setSelectedAnswers([]);
     setAnswersChecked(false);
     setScore(0);
-    setShowScore(false);
     setQuizCompleted(false);
+    setShowSummary(false);
+    setLastQuestion(false);
+    handleActiveQuiz();
   };
 
   const showScoreAndQuestionNo = () => (
@@ -43,7 +46,12 @@ function App() {
     </div>
   );
 
-  //Renders the active quiz with the current question and answer options.
+  const handleFinishQuiz = () => {
+    console.log("Last question!");
+    setLastQuestion(true);
+    setShowSummary(true);
+  };
+
   const handleActiveQuiz = () => (
     <div className="quiz-container">
       <div className="question-container">
@@ -82,34 +90,10 @@ function App() {
             )
           )}
         </ul>
-        {answersChecked ? (
-          <Button
-            currentQuestion={currentQuestion}
-            totalQuestions={quizQuestions.length}
-            answersChecked={answersChecked}
-            onClick={
-              currentQuestion === quizQuestions.length - 1
-                ? () =>
-                    handleSumUp(
-                      score,
-                      quizQuestions,
-                      handleRestartQuiz,
-                      setQuizCompleted
-                    )
-                : () =>
-                    handleNextQuestion(
-                      currentQuestion,
-                      setCurrentQuestion,
-                      setSelectedAnswers,
-                      setAnswersChecked,
-                      quizQuestions,
-                      setShowScore
-                    )
-            }
-          />
-        ) : (
+        {!answersChecked && !lastQuestion && !quizCompleted && (
           <Button
             buttonClass="button-check-answer"
+            text="Check Answer"
             onClick={() =>
               handleCheckAnswer(
                 currentQuestion,
@@ -119,7 +103,42 @@ function App() {
                 setAnswersChecked,
                 score,
                 setScore,
-                setLastQuestion
+                () => {
+                  setLastQuestion(true);
+                }
+              )
+            }
+          />
+        )}
+
+        {lastQuestion && !quizCompleted && (
+          <Button
+            buttonClass="button-finish-quiz"
+            text="Finish Quiz"
+            onClick={() =>
+              handleFinishQuiz(
+                currentQuestion,
+                setCurrentQuestion,
+                setSelectedAnswers,
+                setAnswersChecked,
+                quizQuestions,
+                setQuizCompleted
+              )
+            }
+          />
+        )}
+
+        {answersChecked && !lastQuestion && (
+          <Button
+            buttonClass="button-next-question"
+            text="Next Question"
+            onClick={() =>
+              handleNextQuestion(
+                currentQuestion,
+                setCurrentQuestion,
+                setSelectedAnswers,
+                setAnswersChecked,
+                quizQuestions
               )
             }
           />
@@ -133,7 +152,7 @@ function App() {
     <div className="quiz-container">
       <div className="header">Certified Tester AI Testing (CT-AI)</div>
       <div className="quiz-title">QUIZ</div>
-      {quizCompleted
+      {showSummary
         ? handleSumUp(score, quizQuestions, handleRestartQuiz)
         : handleActiveQuiz()}
     </div>

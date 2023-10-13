@@ -1,5 +1,3 @@
-import Button from "./Button";
-
 export const handleAnswerClick = (
   index,
   answersChecked,
@@ -18,7 +16,6 @@ export const handleAnswerClick = (
     updatedSelectedAnswers.push(index);
   }
 
-
   setSelectedAnswers(updatedSelectedAnswers);
 };
 
@@ -36,6 +33,11 @@ export const handleCheckAnswer = (
     return;
   }
 
+  if (currentQuestion === quizQuestions.length - 1) {
+    setLastQuestion(true);
+    console.log("lastQuestion - true");
+  }
+
   const currentQuestionData = quizQuestions[currentQuestion];
   const correctAnswerIndex = currentQuestionData.answerOptions.findIndex(
     (answerOption) => answerOption.isCorrect
@@ -43,15 +45,13 @@ export const handleCheckAnswer = (
   const isCorrect =
     selectedAnswers.length === 1 && selectedAnswers[0] === correctAnswerIndex;
 
-  setAnswersChecked(true);
+  console.log("answersChecked - true");
 
   if (isCorrect) {
     setScore(score + 1);
   }
 
-  if (currentQuestion === quizQuestions.length - 1) {
-    setLastQuestion(true);
-  }
+  setAnswersChecked(true);
 
   // Nadawanie klas CSS
   const answerContainers = document.querySelectorAll(".answer-container");
@@ -70,33 +70,28 @@ export const handleCheckAnswer = (
   });
 };
 
-
 export const handleNextQuestion = (
   currentQuestion,
   setCurrentQuestion,
   setSelectedAnswers,
-  setAnswersChecked,
-  quizQuestions,
-  setShowScore
+  setAnswersChecked
 ) => {
   setCurrentQuestion(currentQuestion + 1);
   setSelectedAnswers([]);
   setAnswersChecked(false);
-
-  if (currentQuestion === quizQuestions.length - 1) {
-    setShowScore(true);
-  }
 };
 
 export const handleSumUp = (score, quizQuestions, handleRestartQuiz) => {
   return (
-    <div className="sum-up">
+    <div>
       <div className="sum-up-text">
         Thanks for taking part in the quiz!
         <br />
         Your score is: {score}/{quizQuestions.length}
       </div>
-      <Button buttonClass="button-try-again" onClick={handleRestartQuiz}/>
+      <div className="button-try-again" onClick={handleRestartQuiz}>
+        Try Again!
+      </div>
     </div>
   );
 };

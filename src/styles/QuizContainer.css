@@ -55,11 +55,3 @@
 .answer-container.incorrect {
   background-color: #f44336;
 }
-
-.sum-up {
-  font-size: 24px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  font-weight: bold;
-  color: #e8fdff;
-}
